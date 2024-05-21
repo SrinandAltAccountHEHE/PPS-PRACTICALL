@@ -21,7 +21,7 @@ int main() {
     struct student student;
     printf("Enter student details\n");
     printf("Name: ");
-    scanf("%s", &student.name);
+    scanf("%s", student.name);
     printf("Roll: ");
     scanf("%d", &student.roll);
     printf("Birthday(DD MM YYYY)");

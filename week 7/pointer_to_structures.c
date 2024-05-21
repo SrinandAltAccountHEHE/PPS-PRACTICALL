@@ -11,7 +11,7 @@ int main() {
 
     printf("Enter the details of student\n");
     printf("Name: ");
-    scanf("%s", &student.name);
+    scanf("%s", student.name);
     printf("Age: ");
     scanf("%d", &student.age);
 

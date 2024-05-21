@@ -53,8 +53,6 @@ void beginInsert() {
     new_node->data = data;
     new_node->next = head;
     head = new_node;
-
-
 }
 
 void beginDelete() {
@@ -64,6 +62,20 @@ void beginDelete() {
 }
 
 void search() {
+	int key;
+	int index=0;
+	printf("Enter the item you want to search:");
+	scanf("%d", &key);
+	struct node *temp = head;
+	while(temp) {
+		if(key == temp->data) {
+			printf("\nElement found at index %d: ", index);
+			return;
+		}
+		temp=temp->next;
+		index++;
+	}
+	printf("Element not found\n");
 
 }
 

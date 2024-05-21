@@ -49,15 +49,18 @@ void beginInsert() {
     int data;
     printf("Enter the number you want to insert: ");
     scanf("%d", &data);
-    if(!head) {
-        head->data = data;
-        return;
-    }
     struct node *new_node = malloc(sizeof(struct node *));
+    new_node->data = data;
+    new_node->next = head;
+    head = new_node;
+
 
 }
 
 void beginDelete() {
+	struct node *ptr = head;
+	head = head->next;
+	free(ptr);
 }
 
 void search() {
